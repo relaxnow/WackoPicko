@@ -1,4 +1,7 @@
 <?php
+
+require_once 'error_reporting.php';
+
 class DB
 {
    public $conn;

@@ -1,5 +1,6 @@
 <?php
 
+require_once("error_reporting.php");
 require_once("ourdb.php");
 
 class Guestbook
