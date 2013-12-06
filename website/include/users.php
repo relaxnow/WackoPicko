@@ -70,7 +70,7 @@ class Users
 
    function login_user($userid)
    {
-      session_start();
+      @session_start();
       $_SESSION['userid'] = $userid;
       $query = sprintf("UPDATE `users` SET `last_login_on` = NOW( ) WHERE `users`.`id` = '%d' LIMIT 1;",
 		       mysql_real_escape_string($userid));

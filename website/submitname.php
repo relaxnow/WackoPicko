@@ -1,7 +1,7 @@
 <?php
 require_once("include/html_functions.php");
 require_once("include/users.php");
-session_start();
+
 require_login();
 
 if (!isset($_GET['value']))

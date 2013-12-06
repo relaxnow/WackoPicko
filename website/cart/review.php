@@ -7,7 +7,6 @@ require_once("../include/html_functions.php");
 require_once("../include/functions.php");
 
 
-session_start();
 require_login();
 
 $user = Users::current_user();

@@ -6,7 +6,6 @@ require_once("../include/cart.php");
 require_once("../include/html_functions.php");
 require_once("../include/functions.php");
 
-session_start();
 require_login();
 
 // load all the variables I'll need

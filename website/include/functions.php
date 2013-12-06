@@ -16,7 +16,7 @@ function error_404()
 
 function require_login()
 {
-   session_start();
+   @session_start();
    if (!Users::is_logged_in())
    {
       http_redirect(Users::$LOGIN_URL);

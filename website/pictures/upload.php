@@ -5,7 +5,6 @@ require_once("../include/pictures.php");
 require_once("../include/html_functions.php");
 require_once("../include/functions.php");
 
-session_start();
 require_login();
 
 $user = Users::current_user();
@@ -43,7 +42,7 @@ if (isset($_POST['tag']) && isset($_POST['name']) && isset($_FILES['pic']) && is
       {
 	 if (move_uploaded_file($_FILES['pic']['tmp_name'], $filename))
 	 {
-	    
+
 	    if ($id = Pictures::create_picture($_POST['title'], 128, 128, $_POST['tag'], $relfilename, $_POST['price'], $user['id']))
 	    {
 	       $main = ".550.jpg";
@@ -52,7 +51,7 @@ if (isset($_POST['tag']) && isset($_POST['name']) && isset($_FILES['pic']) && is
 	       Pictures::resize_image($filename, $filename . $main, 550, 10000000);
 	       Pictures::resize_image($filename, $filename . $side, 128, 10000000);
 	       Pictures::resize_image($filename, $filename . $thumb, 128, 128);
-	       
+
 	       http_redirect(Pictures::$VIEW_PIC_URL . "?picid={$id}");
 	       $file_uploaded = True;
 	    }
@@ -87,7 +86,7 @@ if (!$file_uploaded)
        <tr><td>Title :</td><td> <input type="text" name="title" /></td></tr>
        <tr><td>Price :</td><td>  <input type="text" name="price" /></td></tr>
        <tr><td>File :</td><td>  <input type="file" name="pic" /></td></tr>
-       <tr><td><input type="submit" value="Upload File" /></td><td></td></tr>       
+       <tr><td><input type="submit" value="Upload File" /></td><td></td></tr>
 </form>
 </table>
 

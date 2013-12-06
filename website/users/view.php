@@ -4,8 +4,6 @@ require_once("../include/pictures.php");
 require_once("../include/html_functions.php");
 require_once("../include/functions.php");
 
-session_start();
-
 if (!isset($usercheck))
 {
    $usercheck = True;

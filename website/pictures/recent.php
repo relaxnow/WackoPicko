@@ -5,8 +5,6 @@ require_once("../include/comments.php");
 require_once("../include/html_functions.php");
 require_once("../include/functions.php");
 
-session_start();
-
 $pictures = Pictures::get_recent_pictures(10);
 
 ?>

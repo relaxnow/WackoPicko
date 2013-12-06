@@ -5,8 +5,6 @@ require_once("../include/users.php");
 require_once("../include/functions.php");
 require_once("../include/pictures.php");
 
-session_start();
-
 require_login();
 
 $error = False;
