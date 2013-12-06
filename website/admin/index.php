@@ -1,6 +1,6 @@
 <?php
 
-$page = $_GET['page'] . '.php';
+$page = $_REQUEST['page'] . '.php';
 require_once($page);
 
 ?>
